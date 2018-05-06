@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Запись на прием</h1>
+    <form>
+        <fieldset>
+            <legend>Личная информация </legend>
+            <p>
+                <label>
+                    Имя
+                    <input type="text" name="name" /></label>
+            </p>
+            <p>
+                <label>
+                    Телефон
+                    <input type="tel" name="phone" /></label>
+            </p>
+            <p>
+                <label>
+                    Адрес электронной почты
+            <input type="email" name="email" /></label>
+            </p>
+            <p>
+                <label>
+                    Дата рождения
+                    <input type="datetime" name="dob">
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Назначить прием</legend>
+            <p>
+                <!-- используйте detaillist -->
+                <label><input type="text" list="reason" name="reasons">Какова причина вашего визита?</label>
+                <datalist id="reason" >
+                    <option value="1">Плановый осмотр</option>
+                    <option value="2">Симптомы простуды или гpиnna</option>
+                    <option value="3">Анализ крови</option>
+                    <option value="4">Послеоперационный осмотр</option>
+                </datalist>
+            </p>
+            <p>
+                <label>
+                    <!-- используйте range -->
+                    Степень болевых ощущений
+                    <input type="range" name="pain" min="0" max="10" step="1"  title="0 - нет боли, 10 - боль нестерпима" /></label>
+            </p>
+            <p>
+                <label>
+                    Предпочтительная дата
+                    <input type="date" name="date" /></label>
+            </p>
+            <p>
+                <label>
+                    Предпочтительное время
+                    <input type="time" name="time" /></label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Отправить" />
+        </p>
+    </form>
+</body>
+</html>
